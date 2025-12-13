@@ -133,7 +133,8 @@
                     <a href="#evaluacion" class="bg-teal-500 hover:bg-teal-400 text-white text-lg px-8 py-4 rounded-lg font-bold transition shadow-xl hover:scale-105 transform duration-200">
                         Quiero mi Evaluación PXW
                     </a>
-                    <a href="#como-funciona" class="bg-transparent border border-gray-500 hover:border-white text-gray-300 hover:text-white text-lg px-8 py-4 rounded-lg font-medium transition flex items-center justify-center gap-2">
+                    <!-- CAMBIO: Ahora apunta al ID #video-demo -->
+                    <a href="#video-demo" class="bg-transparent border border-gray-500 hover:border-white text-gray-300 hover:text-white text-lg px-8 py-4 rounded-lg font-medium transition flex items-center justify-center gap-2">
                         <i class="fa-regular fa-circle-play"></i> Ver cómo funciona
                     </a>
                 </div>
@@ -178,6 +179,41 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE VIDEO DEMO -->
+        <!-- CAMBIO: Añadido id="video-demo" para que el botón funcione -->
+        <section id="video-demo" class="py-20 bg-slate-900 text-white relative">
+            <!-- Patrón de fondo opcional -->
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+            
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl font-bold mb-4">Mira cómo PXW transforma tu clínica en 2 minutos</h2>
+                <p class="text-slate-400 mb-10">Deja de imaginarlo y mira el sistema funcionando en tiempo real.</p>
+                
+                <!-- CONTENEDOR DE VIDEO RESPONSIVE -->
+                <!-- La clase aspect-video mantiene la proporción 16:9 automáticamente -->
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700 bg-black">
+                    <!-- 
+                        CAMBIO: Video actualizado
+                        ID: 7bvmgwz-wew
+                        Inicio: 41 segundos
+                    -->
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/7bvmgwz-wew?start=41&rel=0&modestbranding=1" 
+                        title="PXW Demo Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <p class="mt-8 text-sm text-slate-500 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-arrow-down animate-bounce"></i>
+                    ¿Prefieres leer los detalles? Sigue bajando.
+                </p>
             </div>
         </section>
 
