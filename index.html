@@ -36,572 +36,614 @@
             filter: blur(80px);
             z-index: 0;
         }
+        /* Clase para ocultar elementos con transición */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-    <!-- Navbar Sticky -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="bg-teal-500 text-white p-2 rounded-lg">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    </div>
-                    <span class="font-bold text-xl tracking-tight text-slate-800">PXW System</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#como-funciona" class="text-gray-600 hover:text-teal-600 transition font-medium">¿Cómo funciona?</a>
-                    <a href="#resultados" class="text-gray-600 hover:text-teal-600 transition font-medium">Resultados</a>
-                    <a href="#garantia" class="text-gray-600 hover:text-teal-600 transition font-medium">Garantía</a>
-                </div>
-                <a href="#evaluacion" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-teal-500/30 text-sm">
-                    Evaluación PXW
-                </a>
+    <!-- PANTALLA DE GRACIAS (Oculta por defecto, aparece al enviar) -->
+    <div id="thankYouPage" class="hidden fixed inset-0 bg-white z-[100] flex-col items-center justify-center text-center p-6 overflow-y-auto">
+        <div class="max-w-2xl mx-auto animate-bounce mb-8">
+            <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <i class="fa-solid fa-bolt text-5xl text-green-500"></i>
             </div>
         </div>
-    </nav>
-
-    <!-- SECTION 1: HERO -->
-    <header class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="blob top-0 left-0"></div>
-        <div class="blob bottom-0 right-0 bg-blue-500/10"></div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-block bg-slate-800/50 border border-slate-700 rounded-full px-4 py-1.5 mb-8">
-                <span class="text-teal-400 text-xs font-bold uppercase tracking-wider">Para clínicas estéticas y capilares</span>
-                <span class="text-gray-400 text-xs ml-2 border-l border-slate-600 pl-2">Que reciben +100 leads/mes</span>
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                Instalamos en 21 días tu sistema <br class="hidden md:block" />
-                <span class="text-gradient">“Pacientes x WhatsApp”</span>
-            </h1>
-            
-            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Convierte 30–50% más leads en citas efectivas y reduce drásticamente el no-show. 
-                Dejamos de perder los pacientes que ya estás pagando en publicidad, organizando todo tu flujo con automatizaciones y métricas claras.
-            </p>
-
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-                <a href="#evaluacion" class="bg-teal-500 hover:bg-teal-400 text-white text-lg px-8 py-4 rounded-lg font-bold transition shadow-xl hover:scale-105 transform duration-200">
-                    Quiero mi Evaluación PXW
-                </a>
-                <a href="#como-funciona" class="bg-transparent border border-gray-500 hover:border-white text-gray-300 hover:text-white text-lg px-8 py-4 rounded-lg font-medium transition flex items-center justify-center gap-2">
-                    <i class="fa-regular fa-circle-play"></i> Ver cómo funciona
-                </a>
-            </div>
-            
-            <p class="text-xs text-gray-500">
-                Evaluación sin costo y sin compromiso. Solo para clínicas que ya invierten en anuncios.
-            </p>
+        
+        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">¡Solicitud Recibida!</h2>
+        
+        <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+            Gracias por tu interés en <strong>PXW</strong>. Tu información ha llegado a nuestro equipo.
+        </p>
+        
+        <div class="bg-slate-50 border border-gray-200 p-6 rounded-xl max-w-lg mx-auto mb-10 text-left shadow-sm">
+            <h3 class="font-bold text-slate-800 mb-3 text-lg">¿Qué sigue ahora?</h3>
+            <ul class="space-y-4">
+                <li class="flex gap-3">
+                    <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                    <span class="text-gray-600">Estamos revisando tu perfil ahora mismo.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                    <span class="text-gray-600">Te contactaremos por <strong>WhatsApp de INMEDIATO</strong> para agendar.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="bg-teal-100 text-teal-700 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                    <span class="text-gray-600">Mantente atento a tu celular.</span>
+                </li>
+            </ul>
         </div>
-    </header>
 
-    <!-- SECTION 2: PAIN / PROBLEM -->
-    <section class="py-20 bg-rose-50 border-b border-rose-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">No necesitas más leads. <span class="text-rose-600">Necesitas dejar de perder los que ya tienes.</span></h2>
-                <p class="text-lg text-gray-600">Hoy tu clínica probablemente está dejando dinero en la mesa. No porque falten personas interesadas, sino porque el proceso falla.</p>
-            </div>
+        <a href="index.html" onclick="location.reload()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-10 rounded-full transition transform hover:scale-105 shadow-xl">
+            Volver al inicio
+        </a>
+    </div>
 
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-rose-100">
-                <h3 class="text-rose-800 font-semibold mb-6 uppercase tracking-wide text-sm">Sin PXW, suele pasar esto:</h3>
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
-                        <span class="text-gray-700"><strong>Leads calientes se enfrían:</strong> Escriben por WhatsApp y nadie responde a tiempo.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
-                        <span class="text-gray-700"><strong>Citas "fantasma":</strong> Agendadas a medias, sin recordatorios, resultando en pacientes que no llegan.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
-                        <span class="text-gray-700"><strong>Recepción saturada:</strong> Contestando manualmente lo mismo 100 veces al día sin priorizar casos de alto valor.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
-                        <span class="text-gray-700"><strong>Gerencia a ciegas:</strong> Sin claridad de CAC, ROAS o tasa de conversión real.</span>
-                    </li>
-                </ul>
-                <div class="mt-8 pt-6 border-t border-gray-100 text-center">
-                    <p class="text-teal-700 font-medium italic">
-                        "La buena noticia: todo esto se puede automatizar usando el mismo canal donde tus pacientes ya están: WhatsApp."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- CONTENIDO PRINCIPAL (Se ocultará al enviar) -->
+    <div id="mainContent">
 
-    <!-- SECTION 3: WHAT IS PXW -->
-    <section id="como-funciona" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">¿Qué es PXW y cómo funciona?</h2>
-                <p class="text-lg text-gray-600">Un sistema especializado que organiza el recorrido del paciente desde el primer "Hola" hasta el seguimiento post-tratamiento.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
-                    <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-500 transition">
-                        <i class="fa-brands fa-whatsapp text-2xl text-teal-600 group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">1. Respuesta Inmediata</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        El lead llega de tus anuncios y recibe una respuesta clara y rápida 24/7, sin depender de que tu recepcionista esté libre.
-                    </p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
-                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition">
-                        <i class="fa-solid fa-filter text-2xl text-blue-600 group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">2. Clasificación Inteligente</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        PXW recoge datos básicos (interés, tratamiento) y los coloca en un pipeline visual para que tu equipo sepa a quién llamar primero.
-                    </p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
-                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500 transition">
-                        <i class="fa-regular fa-calendar-check text-2xl text-purple-600 group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">3. Agenda Anti No-Show</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Recordatorios automáticos (48h, 24h, 2h) que reducen el ausentismo y gestionan reprogramaciones automáticamente.
-                    </p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
-                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
-                        <i class="fa-solid fa-rotate-right text-2xl text-orange-600 group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">4. Reactivación y Seguimiento</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Mensajes post-tratamiento y encuestas de satisfacción. Reactivamos pacientes antiguos que no cerraron.
-                    </p>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group md:col-span-2 lg:col-span-2">
-                    <div class="flex flex-col md:flex-row gap-6 items-start md:items-center h-full">
-                        <div class="w-14 h-14 bg-emerald-100 rounded-xl flex flex-shrink-0 items-center justify-center group-hover:bg-emerald-500 transition">
-                            <i class="fa-solid fa-chart-line text-2xl text-emerald-600 group-hover:text-white"></i>
+        <!-- Navbar Sticky -->
+        <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20 items-center">
+                    <div class="flex items-center gap-2">
+                        <div class="bg-teal-500 text-white p-2 rounded-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">5. Panel de Control Gerencial</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                Un Dashboard donde ves todo: Cuántos leads entran, cuántos agendan, tasa de no-show y el ROAS de tu inversión. Datos para decidir, no para adivinar.
-                            </p>
-                        </div>
+                        <span class="font-bold text-xl tracking-tight text-slate-800">PXW System</span>
                     </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#como-funciona" class="text-gray-600 hover:text-teal-600 transition font-medium">¿Cómo funciona?</a>
+                        <a href="#resultados" class="text-gray-600 hover:text-teal-600 transition font-medium">Resultados</a>
+                        <a href="#garantia" class="text-gray-600 hover:text-teal-600 transition font-medium">Garantía</a>
+                    </div>
+                    <a href="#evaluacion" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-teal-500/30 text-sm">
+                        Evaluación PXW
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- SECTION 4: 21 DAYS IMPLEMENTATION -->
-    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que instalamos en 21 días</h2>
-                <p class="text-slate-400">No es solo "una automatización", es un sistema completo de gestión.</p>
-            </div>
+        <!-- SECTION 1: HERO -->
+        <header class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="blob top-0 left-0"></div>
+            <div class="blob bottom-0 right-0 bg-blue-500/10"></div>
 
-            <div class="space-y-6">
-                <!-- Module Item -->
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
-                    <div class="flex-shrink-0">
-                        <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 1</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Diagnóstico de Embudo y WhatsApp</h4>
-                        <p class="text-slate-400 text-sm">Análisis de línea base: conversión actual, tiempos de respuesta y detección de fugas de dinero.</p>
-                    </div>
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-block bg-slate-800/50 border border-slate-700 rounded-full px-4 py-1.5 mb-8">
+                    <span class="text-teal-400 text-xs font-bold uppercase tracking-wider">Para clínicas estéticas y capilares</span>
+                    <span class="text-gray-400 text-xs ml-2 border-l border-slate-600 pl-2">Que reciben +100 leads/mes</span>
                 </div>
-
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
-                    <div class="flex-shrink-0">
-                        <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 2</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Configuración Técnica en HighLevel</h4>
-                        <p class="text-slate-400 text-sm">Integración con WhatsApp Business, diseño de pipelines visuales y configuración de agendas por médico/sede.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
-                    <div class="flex-shrink-0">
-                        <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 3</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Automatizaciones que Convierten</h4>
-                        <p class="text-slate-400 text-sm">Respuestas iniciales, recordatorios infalibles (48h, 24h, 2h), manejo de reprogramaciones y reactivación.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
-                    <div class="flex-shrink-0">
-                        <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 4</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Panel de KPIs para Dirección</h4>
-                        <p class="text-slate-400 text-sm">Dashboard visual: Leads vs Citas, % No-Show, Costo por Lead y Retorno de Inversión.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
-                    <div class="flex-shrink-0">
-                        <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 5</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white mb-2">Capacitación y Acompañamiento</h4>
-                        <p class="text-slate-400 text-sm">Entrenamiento práctico para recepcionistas y sesión estratégica para gerencia.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: BONUSES -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 mb-2">Bonos Exclusivos</h2>
-                <p class="text-teal-600 font-semibold uppercase tracking-wider text-sm">Para las primeras clínicas del mes</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Bonus 1 -->
-                <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
-                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">VALOR INVALUABLE</div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 1: Guiones de WhatsApp</h3>
-                    <p class="text-gray-600 text-sm">Pack de mensajes listos para copiar: manejo de objeciones ("es muy caro"), reagendamiento elegante y cierre.</p>
-                </div>
-                <!-- Bonus 2 -->
-                <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
-                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">AHORRO DE TIEMPO</div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 2: Formulario Preconsulta</h3>
-                    <p class="text-gray-600 text-sm">Perfilado digital del paciente antes de la cita. Facilita el trabajo del médico y mejora la experiencia.</p>
-                </div>
-                <!-- Bonus 3 -->
-                <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
-                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">VISIÓN CLARA</div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 3: Reporte "Salud del Embudo"</h3>
-                    <p class="text-gray-600 text-sm">Resumen mensual para gerencia con recomendaciones prácticas para bajar el CAC y mejorar el ROAS.</p>
-                </div>
-                <!-- Bonus 4 -->
-                <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
-                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">MÁS CIERRES</div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 4: Resumen para el Médico</h3>
-                    <p class="text-gray-600 text-sm">Estructura de info que el médico ve antes de entrar a consulta. Menos improvisación, más ventas.</p>
-                </div>
-            </div>
-            <p class="text-center text-sm text-red-500 mt-6 font-medium">⚠️ Disponibilidad limitada para mantener la calidad del soporte.</p>
-        </div>
-    </section>
-
-    <!-- SECTION 6: RESULTS & DIFFERENTIALS -->
-    <section id="resultados" class="py-20 bg-teal-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
-                <!-- Results Stats -->
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Resultados Reales</h2>
-                    <p class="text-gray-600 mb-8">Probamos, medimos e iteramos. PXW nace de la práctica en clínicas reales, no de la teoría.</p>
-                    
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
-                            <span class="block text-4xl font-extrabold text-teal-600 mb-2">+30%</span>
-                            <span class="text-sm text-gray-600 font-medium">Conversión Lead → Cita</span>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
-                            <span class="block text-4xl font-extrabold text-teal-600 mb-2">-40%</span>
-                            <span class="text-sm text-gray-600 font-medium">Reducción de No-Show</span>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
-                            <i class="fa-solid fa-bolt text-3xl text-yellow-500 mb-3"></i>
-                            <span class="block text-sm text-gray-600 font-medium">Respuestas Instantáneas</span>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
-                            <i class="fa-solid fa-eye text-3xl text-blue-500 mb-3"></i>
-                            <span class="block text-sm text-gray-600 font-medium">Visibilidad Total (ROAS)</span>
-                        </div>
-                    </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Instalamos en 21 días tu sistema <br class="hidden md:block" />
+                    <span class="text-gradient">“Pacientes x WhatsApp”</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                    Convierte 30–50% más leads en citas efectivas y reduce drásticamente el no-show. 
+                    Dejamos de perder los pacientes que ya estás pagando en publicidad, organizando todo tu flujo con automatizaciones y métricas claras.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+                    <a href="#evaluacion" class="bg-teal-500 hover:bg-teal-400 text-white text-lg px-8 py-4 rounded-lg font-bold transition shadow-xl hover:scale-105 transform duration-200">
+                        Quiero mi Evaluación PXW
+                    </a>
+                    <a href="#como-funciona" class="bg-transparent border border-gray-500 hover:border-white text-gray-300 hover:text-white text-lg px-8 py-4 rounded-lg font-medium transition flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-circle-play"></i> Ver cómo funciona
+                    </a>
                 </div>
-
-                <!-- Differentials -->
-                <div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6">¿Por qué PXW es diferente?</h3>
-                    <div class="space-y-4">
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-check text-teal-600 text-sm"></i>
-                            </div>
-                            <p class="text-gray-700 text-sm pt-1"><strong>Diseño de Nicho:</strong> Específico para clínicas estéticas y capilares.</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-check text-teal-600 text-sm"></i>
-                            </div>
-                            <p class="text-gray-700 text-sm pt-1"><strong>All-in-One:</strong> Integra WhatsApp, agenda y métricas. No más apps dispersas.</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-check text-teal-600 text-sm"></i>
-                            </div>
-                            <p class="text-gray-700 text-sm pt-1"><strong>Enfoque en Rentabilidad:</strong> Creado para reducir el No-Show y aumentar cierres.</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-check text-teal-600 text-sm"></i>
-                            </div>
-                            <p class="text-gray-700 text-sm pt-1"><strong>No estás solo:</strong> Incluye capacitación humana, no es solo un software.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 7: PRICING & PLAN -->
-    <section class="py-20 bg-white border-b border-gray-200">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-slate-900 mb-6">Plan e Inversión</h2>
-            <p class="text-lg text-gray-600 mb-10">
-                El dinero que pierdes cada mes en citas no asistidas es superior a la inversión en PXW. <br>El objetivo es que el sistema se pague solo.
-            </p>
-
-            <div class="bg-slate-50 border border-gray-200 rounded-2xl p-8 mb-10 text-left">
-                <h3 class="text-xl font-bold text-slate-800 mb-4">Estructura Transparente:</h3>
-                <ul class="space-y-3 mb-6">
-                    <li class="flex items-center gap-3">
-                        <span class="bg-blue-100 text-blue-800 font-bold px-2 py-1 rounded text-xs">PAGO ÚNICO</span>
-                        <span class="text-gray-700"><strong>Setup de Implementación:</strong> Configuración total, HighLevel, Dashboards y Capacitación.</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="bg-teal-100 text-teal-800 font-bold px-2 py-1 rounded text-xs">MENSUAL</span>
-                        <span class="text-gray-700"><strong>Fee de Acompañamiento:</strong> Soporte, mejoras, reportes y tecnología.</span>
-                    </li>
-                </ul>
-                <p class="text-sm text-gray-500 italic">* Planes disponibles para 1 Sede, Multisede (2-4) y Partners.</p>
-            </div>
-            
-            <a href="#evaluacion" class="inline-block text-teal-600 font-bold hover:underline">👉 Por eso empezamos con una Evaluación (Sin Costo)</a>
-        </div>
-    </section>
-
-    <!-- SECTION 8: GUARANTEE -->
-    <section id="garantia" class="py-16 bg-slate-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-            <div class="flex-shrink-0">
-                <i class="fa-solid fa-shield-halved text-6xl text-teal-400"></i>
-            </div>
-            <div>
-                <h3 class="text-2xl font-bold mb-3">Garantía de Implementación 100% Operativa</h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Si en los primeros <strong>45 días</strong> tu sistema PXW no queda 100% operativo, gestionando pacientes en HighLevel, te acompañamos sin costo adicional hasta lograrlo o te devolvemos mis honorarios de implementación.
+                
+                <p class="text-xs text-gray-500">
+                    Evaluación sin costo y sin compromiso. Solo para clínicas que ya invierten en anuncios.
                 </p>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- SECTION 9: FAQ -->
-    <section class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Preguntas Frecuentes</h2>
-            
-            <div class="space-y-4">
-                <!-- FAQ Item -->
-                <details class="group bg-gray-50 rounded-xl">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
-                        <span>¿Tengo que cambiar todo mi sistema actual?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-teal-600"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
-                        No necesariamente. PXW se integra con WhatsApp y en muchos casos complementa lo que ya tienes. En la evaluación vemos el camino más simple.
-                    </div>
-                </details>
-
-                <details class="group bg-gray-50 rounded-xl">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
-                        <span>¿Quién va a usar PXW en el día a día?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-teal-600"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
-                        Tu equipo de recepción y marketing. Les damos capacitación práctica para operar sin complicaciones.
-                    </div>
-                </details>
-
-                <details class="group bg-gray-50 rounded-xl">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
-                        <span>¿Qué pasa si todavía no tengo tantos leads?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-teal-600"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
-                        Recomendamos PXW para clínicas con +100 leads/mes. Si tienes menos, necesitas generación de demanda primero. Te lo diremos honestamente en la evaluación.
-                    </div>
-                </details>
-
-                <details class="group bg-gray-50 rounded-xl">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
-                        <span>¿Cuánto tiempo toma la implementación?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-teal-600"></i>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
-                        Aproximadamente 21 días para dejar todo 100% operativo, dependiendo de la fluidez de la información.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 10: FORM -->
-    <section id="evaluacion" class="py-20 bg-gradient-to-b from-teal-50 to-white">
-        <div class="max-w-2xl mx-auto px-4">
-            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Solicita tu Evaluación PXW</h2>
-                    <p class="text-gray-600">Déjanos tus datos. Si PXW encaja con tu clínica, te contactaremos en 24-48h.</p>
+        <!-- SECTION 2: PAIN / PROBLEM -->
+        <section class="py-20 bg-rose-50 border-b border-rose-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">No necesitas más leads. <span class="text-rose-600">Necesitas dejar de perder los que ya tienes.</span></h2>
+                    <p class="text-lg text-gray-600">Hoy tu clínica probablemente está dejando dinero en la mesa. No porque falten personas interesadas, sino porque el proceso falla.</p>
                 </div>
 
-                <!-- Form Start -->
-                <form id="pxwForm" class="space-y-5">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-rose-100">
+                    <h3 class="text-rose-800 font-semibold mb-6 uppercase tracking-wide text-sm">Sin PXW, suele pasar esto:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
+                            <span class="text-gray-700"><strong>Leads calientes se enfrían:</strong> Escriben por WhatsApp y nadie responde a tiempo.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
+                            <span class="text-gray-700"><strong>Citas "fantasma":</strong> Agendadas a medias, sin recordatorios, resultando en pacientes que no llegan.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
+                            <span class="text-gray-700"><strong>Recepción saturada:</strong> Contestando manualmente lo mismo 100 veces al día sin priorizar casos de alto valor.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-white bg-rose-500 rounded-full p-1 w-6 h-6 flex items-center justify-center mt-1 text-xs"></i>
+                            <span class="text-gray-700"><strong>Gerencia a ciegas:</strong> Sin claridad de CAC, ROAS o tasa de conversión real.</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-gray-100 text-center">
+                        <p class="text-teal-700 font-medium italic">
+                            "La buena noticia: todo esto se puede automatizar usando el mismo canal donde tus pacientes ya están: WhatsApp."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHAT IS PXW -->
+        <section id="como-funciona" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">¿Qué es PXW y cómo funciona?</h2>
+                    <p class="text-lg text-gray-600">Un sistema especializado que organiza el recorrido del paciente desde el primer "Hola" hasta el seguimiento post-tratamiento.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
+                        <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-500 transition">
+                            <i class="fa-brands fa-whatsapp text-2xl text-teal-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">1. Respuesta Inmediata</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            El lead llega de tus anuncios y recibe una respuesta clara y rápida 24/7, sin depender de que tu recepcionista esté libre.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
+                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition">
+                            <i class="fa-solid fa-filter text-2xl text-blue-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">2. Clasificación Inteligente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            PXW recoge datos básicos (interés, tratamiento) y los coloca en un pipeline visual para que tu equipo sepa a quién llamar primero.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
+                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500 transition">
+                            <i class="fa-regular fa-calendar-check text-2xl text-purple-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">3. Agenda Anti No-Show</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Recordatorios automáticos (48h, 24h, 2h) que reducen el ausentismo y gestionan reprogramaciones automáticamente.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group">
+                        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
+                            <i class="fa-solid fa-rotate-right text-2xl text-orange-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">4. Reactivación y Seguimiento</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Mensajes post-tratamiento y encuestas de satisfacción. Reactivamos pacientes antiguos que no cerraron.
+                        </p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-slate-100 group md:col-span-2 lg:col-span-2">
+                        <div class="flex flex-col md:flex-row gap-6 items-start md:items-center h-full">
+                            <div class="w-14 h-14 bg-emerald-100 rounded-xl flex flex-shrink-0 items-center justify-center group-hover:bg-emerald-500 transition">
+                                <i class="fa-solid fa-chart-line text-2xl text-emerald-600 group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">5. Panel de Control Gerencial</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Un Dashboard donde ves todo: Cuántos leads entran, cuántos agendan, tasa de no-show y el ROAS de tu inversión. Datos para decidir, no para adivinar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: 21 DAYS IMPLEMENTATION -->
+        <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que instalamos en 21 días</h2>
+                    <p class="text-slate-400">No es solo "una automatización", es un sistema completo de gestión.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Module Item -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
+                        <div class="flex-shrink-0">
+                            <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 1</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Diagnóstico de Embudo y WhatsApp</h4>
+                            <p class="text-slate-400 text-sm">Análisis de línea base: conversión actual, tiempos de respuesta y detección de fugas de dinero.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
+                        <div class="flex-shrink-0">
+                            <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 2</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Configuración Técnica en HighLevel</h4>
+                            <p class="text-slate-400 text-sm">Integración con WhatsApp Business, diseño de pipelines visuales y configuración de agendas por médico/sede.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
+                        <div class="flex-shrink-0">
+                            <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 3</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Automatizaciones que Convierten</h4>
+                            <p class="text-slate-400 text-sm">Respuestas iniciales, recordatorios infalibles (48h, 24h, 2h), manejo de reprogramaciones y reactivación.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
+                        <div class="flex-shrink-0">
+                            <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 4</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Panel de KPIs para Dirección</h4>
+                            <p class="text-slate-400 text-sm">Dashboard visual: Leads vs Citas, % No-Show, Costo por Lead y Retorno de Inversión.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition">
+                        <div class="flex-shrink-0">
+                            <span class="bg-teal-600 text-white font-bold px-3 py-1 rounded text-sm">Módulo 5</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Capacitación y Acompañamiento</h4>
+                            <p class="text-slate-400 text-sm">Entrenamiento práctico para recepcionistas y sesión estratégica para gerencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: BONUSES -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Bonos Exclusivos</h2>
+                    <p class="text-teal-600 font-semibold uppercase tracking-wider text-sm">Para las primeras clínicas del mes</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Bonus 1 -->
+                    <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">VALOR INVALUABLE</div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 1: Guiones de WhatsApp</h3>
+                        <p class="text-gray-600 text-sm">Pack de mensajes listos para copiar: manejo de objeciones ("es muy caro"), reagendamiento elegante y cierre.</p>
+                    </div>
+                    <!-- Bonus 2 -->
+                    <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">AHORRO DE TIEMPO</div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 2: Formulario Preconsulta</h3>
+                        <p class="text-gray-600 text-sm">Perfilado digital del paciente antes de la cita. Facilita el trabajo del médico y mejora la experiencia.</p>
+                    </div>
+                    <!-- Bonus 3 -->
+                    <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">VISIÓN CLARA</div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 3: Reporte "Salud del Embudo"</h3>
+                        <p class="text-gray-600 text-sm">Resumen mensual para gerencia con recomendaciones prácticas para bajar el CAC y mejorar el ROAS.</p>
+                    </div>
+                    <!-- Bonus 4 -->
+                    <div class="border border-gray-200 rounded-xl p-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">MÁS CIERRES</div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">🎁 Bono 4: Resumen para el Médico</h3>
+                        <p class="text-gray-600 text-sm">Estructura de info que el médico ve antes de entrar a consulta. Menos improvisación, más ventas.</p>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-red-500 mt-6 font-medium">⚠️ Disponibilidad limitada para mantener la calidad del soporte.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 6: RESULTS & DIFFERENTIALS -->
+        <section id="resultados" class="py-20 bg-teal-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Nombre de la Clínica</label>
-                            <input type="text" placeholder="Ej: Clínica Estética..." required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Ciudad y País</label>
-                            <input type="text" placeholder="Ej: Lima, Perú" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
-                        </div>
-                    </div>
-
+                    <!-- Results Stats -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Tu Nombre y Cargo</label>
-                        <input type="text" placeholder="Ej: Juan Pérez - Director" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
-                            <input type="tel" placeholder="+51 999..." required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                            <input type="email" placeholder="correo@clinica.com" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Leads Digitales / Mes</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 outline-none bg-white">
-                                <option>Menos de 100</option>
-                                <option>Entre 100 y 300</option>
-                                <option>Entre 300 y 600</option>
-                                <option>Más de 600</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Inversión Ads / Mes (USD)</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 outline-none bg-white">
-                                <option>Menos de $1,000</option>
-                                <option>$1,000 - $3,000</option>
-                                <option>Más de $3,000</option>
-                            </select>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">Resultados Reales</h2>
+                        <p class="text-gray-600 mb-8">Probamos, medimos e iteramos. PXW nace de la práctica en clínicas reales, no de la teoría.</p>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
+                                <span class="block text-4xl font-extrabold text-teal-600 mb-2">+30%</span>
+                                <span class="text-sm text-gray-600 font-medium">Conversión Lead → Cita</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
+                                <span class="block text-4xl font-extrabold text-teal-600 mb-2">-40%</span>
+                                <span class="text-sm text-gray-600 font-medium">Reducción de No-Show</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
+                                <i class="fa-solid fa-bolt text-3xl text-yellow-500 mb-3"></i>
+                                <span class="block text-sm text-gray-600 font-medium">Respuestas Instantáneas</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-teal-100 text-center">
+                                <i class="fa-solid fa-eye text-3xl text-blue-500 mb-3"></i>
+                                <span class="block text-sm text-gray-600 font-medium">Visibilidad Total (ROAS)</span>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Differentials -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">¿Qué te gustaría mejorar? (Opcional)</label>
-                        <div class="grid grid-cols-1 gap-2">
-                            <label class="flex items-center gap-2 text-sm text-gray-600">
-                                <input type="checkbox" class="text-teal-600 rounded focus:ring-teal-500"> Convertir más leads en citas
-                            </label>
-                            <label class="flex items-center gap-2 text-sm text-gray-600">
-                                <input type="checkbox" class="text-teal-600 rounded focus:ring-teal-500"> Reducir el no-show (ausentismo)
-                            </label>
-                            <label class="flex items-center gap-2 text-sm text-gray-600">
-                                <input type="checkbox" class="text-teal-600 rounded focus:ring-teal-500"> Ordenar métricas y reportes
-                            </label>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">¿Por qué PXW es diferente?</h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-check text-teal-600 text-sm"></i>
+                                </div>
+                                <p class="text-gray-700 text-sm pt-1"><strong>Diseño de Nicho:</strong> Específico para clínicas estéticas y capilares.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-check text-teal-600 text-sm"></i>
+                                </div>
+                                <p class="text-gray-700 text-sm pt-1"><strong>All-in-One:</strong> Integra WhatsApp, agenda y métricas. No más apps dispersas.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-check text-teal-600 text-sm"></i>
+                                </div>
+                                <p class="text-gray-700 text-sm pt-1"><strong>Enfoque en Rentabilidad:</strong> Creado para reducir el No-Show y aumentar cierres.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-check text-teal-600 text-sm"></i>
+                                </div>
+                                <p class="text-gray-700 text-sm pt-1"><strong>No estás solo:</strong> Incluye capacitación humana, no es solo un software.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="pt-2">
-                        <label class="flex items-start gap-3 text-xs text-gray-500">
-                            <input type="checkbox" required class="mt-1 text-teal-600 rounded focus:ring-teal-500">
-                            Acepto ser contactado para coordinar la Evaluación PXW. Entiendo que esta sesión es para clínicas que ya invierten en publicidad.
-                        </label>
-                    </div>
+        <!-- SECTION 7: PRICING & PLAN -->
+        <section class="py-20 bg-white border-b border-gray-200">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Plan e Inversión</h2>
+                <p class="text-lg text-gray-600 mb-10">
+                    El dinero que pierdes cada mes en citas no asistidas es superior a la inversión en PXW. <br>El objetivo es que el sistema se pague solo.
+                </p>
 
-                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-                        Quiero mi Evaluación PXW
-                    </button>
-                    <p class="text-center text-xs text-gray-400">Sin costo • Sin compromiso</p>
-                </form>
+                <div class="bg-slate-50 border border-gray-200 rounded-2xl p-8 mb-10 text-left">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Estructura Transparente:</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center gap-3">
+                            <span class="bg-blue-100 text-blue-800 font-bold px-2 py-1 rounded text-xs">PAGO ÚNICO</span>
+                            <span class="text-gray-700"><strong>Setup de Implementación:</strong> Configuración total, HighLevel, Dashboards y Capacitación.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="bg-teal-100 text-teal-800 font-bold px-2 py-1 rounded text-xs">MENSUAL</span>
+                            <span class="text-gray-700"><strong>Fee de Acompañamiento:</strong> Soporte, mejoras, reportes y tecnología.</span>
+                        </li>
+                    </ul>
+                    <p class="text-sm text-gray-500 italic">* Planes disponibles para 1 Sede, Multisede (2-4) y Partners.</p>
+                </div>
+                
+                <a href="#evaluacion" class="inline-block text-teal-600 font-bold hover:underline">👉 Por eso empezamos con una Evaluación (Sin Costo)</a>
+            </div>
+        </section>
 
-                <!-- Success Message (Hidden by default) -->
-                <div id="successMessage" class="hidden text-center py-10">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa-solid fa-check text-4xl text-green-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">¡Solicitud Recibida! 🙌</h3>
-                    <p class="text-gray-600 mb-6">
-                        Hemos recibido tus datos correctamente. Te contactaremos por WhatsApp o correo en un plazo de 24-48 horas hábiles para coordinar tu evaluación.
+        <!-- SECTION 8: GUARANTEE -->
+        <section id="garantia" class="py-16 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-shrink-0">
+                    <i class="fa-solid fa-shield-halved text-6xl text-teal-400"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-3">Garantía de Implementación 100% Operativa</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Si en los primeros <strong>45 días</strong> tu sistema PXW no queda 100% operativo, gestionando pacientes en HighLevel, te acompañamos sin costo adicional hasta lograrlo o te devolvemos mis honorarios de implementación.
                     </p>
-                    <button onclick="location.reload()" class="text-teal-600 font-semibold hover:underline">Volver al inicio</button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 11: FINAL CTA & FOOTER -->
-    <footer class="bg-slate-900 text-white pt-20 pb-10 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">¿Quieres dejar de perder pacientes en WhatsApp?</h2>
-            <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
-                Si tu clínica ya invierte en anuncios, el siguiente paso no es gastar más, sino aprovechar mejor cada contacto. PXW ordena tu flujo y asegura tus citas.
-            </p>
-            <a href="#evaluacion" class="inline-block bg-teal-500 hover:bg-teal-400 text-white text-lg px-10 py-4 rounded-lg font-bold transition shadow-lg mb-12">
-                Agendar Evaluación Ahora
-            </a>
-
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-                <div class="flex items-center gap-2 mb-4 md:mb-0">
-                    <i class="fa-brands fa-whatsapp text-teal-500"></i>
-                    <span>PXW System &copy; 2024</span>
-                </div>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-white transition">Privacidad</a>
-                    <a href="#" class="hover:text-white transition">Términos</a>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- SECTION 9: FAQ -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Preguntas Frecuentes</h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item -->
+                    <details class="group bg-gray-50 rounded-xl">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
+                            <span>¿Tengo que cambiar todo mi sistema actual?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-teal-600"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
+                            No necesariamente. PXW se integra con WhatsApp y en muchos casos complementa lo que ya tienes. En la evaluación vemos el camino más simple.
+                        </div>
+                    </details>
+
+                    <details class="group bg-gray-50 rounded-xl">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
+                            <span>¿Quién va a usar PXW en el día a día?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-teal-600"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
+                            Tu equipo de recepción y marketing. Les damos capacitación práctica para operar sin complicaciones.
+                        </div>
+                    </details>
+
+                    <details class="group bg-gray-50 rounded-xl">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
+                            <span>¿Qué pasa si todavía no tengo tantos leads?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-teal-600"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
+                            Recomendamos PXW para clínicas con +100 leads/mes. Si tienes menos, necesitas generación de demanda primero. Te lo diremos honestamente en la evaluación.
+                        </div>
+                    </details>
+
+                    <details class="group bg-gray-50 rounded-xl">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-slate-800">
+                            <span>¿Cuánto tiempo toma la implementación?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down text-teal-600"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
+                            Aproximadamente 21 días para dejar todo 100% operativo, dependiendo de la fluidez de la información.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: FORM -->
+        <section id="evaluacion" class="py-20 bg-gradient-to-b from-teal-50 to-white">
+            <div class="max-w-2xl mx-auto px-4">
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-2">Solicita tu Evaluación PXW</h2>
+                        <p class="text-gray-600">Déjanos tus datos. Si PXW encaja con tu clínica, te contactaremos en 24-48h.</p>
+                    </div>
+
+                    <!-- Form Start -->
+                    <form id="pxwForm" class="space-y-5">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nombre de la Clínica</label>
+                                <input type="text" placeholder="Ej: Clínica Estética..." required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Ciudad y País</label>
+                                <input type="text" placeholder="Ej: Lima, Perú" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
+                            </div>
+                        </div>
+
+                        <!-- MODIFICADO: Ahora es un Grid con 2 columnas (Nombre/Cargo y Instagram) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Tu Nombre y Cargo</label>
+                                <input type="text" placeholder="Ej: Juan Pérez - Director" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Instagram / Red Social</label>
+                                <input type="text" placeholder="@tu_clinica" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                                <input type="tel" placeholder="+51 999..." required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                                <input type="email" placeholder="correo@clinica.com" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Leads Digitales / Mes</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 outline-none bg-white">
+                                    <option>Menos de 100</option>
+                                    <option>Entre 100 y 300</option>
+                                    <option>Entre 300 y 600</option>
+                                    <option>Más de 600</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Inversión Ads / Mes (USD)</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 outline-none bg-white">
+                                    <option>Menos de $1,000</option>
+                                    <option>$1,000 - $3,000</option>
+                                    <option>Más de $3,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">¿Qué te gustaría mejorar? (Opcional)</label>
+                            <div class="grid grid-cols-1 gap-2">
+                                <label class="flex items-center gap-2 text-sm text-gray-600">
+                                    <input type="checkbox" class="text-teal-600 rounded focus:ring-teal-500"> Convertir más leads en citas
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-600">
+                                    <input type="checkbox" class="text-teal-600 rounded focus:ring-teal-500"> Reducir el no-show (ausentismo)
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-600">
+                                    <input type="checkbox" class="text-teal-600 rounded focus:ring-teal-500"> Ordenar métricas y reportes
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <label class="flex items-start gap-3 text-xs text-gray-500">
+                                <input type="checkbox" required class="mt-1 text-teal-600 rounded focus:ring-teal-500">
+                                Acepto ser contactado para coordinar la Evaluación PXW. Entiendo que esta sesión es para clínicas que ya invierten en publicidad.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                            Quiero mi Evaluación PXW
+                        </button>
+                        <p class="text-center text-xs text-gray-400">Sin costo • Sin compromiso</p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: FINAL CTA & FOOTER -->
+        <footer class="bg-slate-900 text-white pt-20 pb-10 border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">¿Quieres dejar de perder pacientes en WhatsApp?</h2>
+                <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
+                    Si tu clínica ya invierte en anuncios, el siguiente paso no es gastar más, sino aprovechar mejor cada contacto. PXW ordena tu flujo y asegura tus citas.
+                </p>
+                <a href="#evaluacion" class="inline-block bg-teal-500 hover:bg-teal-400 text-white text-lg px-10 py-4 rounded-lg font-bold transition shadow-lg mb-12">
+                    Agendar Evaluación Ahora
+                </a>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                    <div class="flex items-center gap-2 mb-4 md:mb-0">
+                        <i class="fa-brands fa-whatsapp text-teal-500"></i>
+                        <span>PXW System &copy; 2024</span>
+                    </div>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white transition">Privacidad</a>
+                        <a href="#" class="hover:text-white transition">Términos</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div> <!-- FIN DEL MAIN CONTENT -->
 
     <!-- FIREBASE INTEGRATION SCRIPT -->
     <script type="module">
-        // Importar las funciones necesarias del SDK de Firebase v10
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -611,26 +653,47 @@
         // 2. Entra a tu proyecto > Configuración del proyecto
         // 3. Copia el 'const firebaseConfig' y reemplaza todo este bloque:
         
-        // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+        const firebaseConfig = {
+            apiKey: "API_KEY_AQUI",
+            authDomain: "TU_PROYECTO.firebaseapp.com",
+            projectId: "TU_PROYECTO_ID",
+            storageBucket: "TU_PROYECTO.appspot.com",
+            messagingSenderId: "NUMEROS...",
+            appId: "APP_ID..."
+        };
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDNXWVXRM7rzF0hcMLJ7hBHVu4HkIIrWHo",
-  authDomain: "clinico-pxw.firebaseapp.com",
-  projectId: "clinico-pxw",
-  storageBucket: "clinico-pxw.firebasestorage.app",
-  messagingSenderId: "798801824720",
-  appId: "1:798801824720:web:8d1841bd4333d43baac7d5"
-};
+        // --- FUNCIÓN PARA MOSTRAR LA PÁGINA DE GRACIAS ---
+        function showThankYouPage() {
+            const mainContent = document.getElementById('mainContent');
+            const thankYouPage = document.getElementById('thankYouPage');
+            
+            // Efecto visual: desvanecer contenido principal
+            mainContent.classList.add('fade-out');
+            
+            // Mostrar página de gracias después de 300ms
+            setTimeout(() => {
+                mainContent.style.display = 'none';
+                thankYouPage.classList.remove('hidden');
+                thankYouPage.classList.add('flex');
+            }, 300);
+            
+            // Scroll arriba
+            window.scrollTo(0, 0);
+        }
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-        // Inicializar Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        // --- INICIALIZACIÓN ---
+        let db = null;
+        let isSimulated = false;
+
+        // Verificar si las credenciales son las de ejemplo
+        if (firebaseConfig.apiKey === "API_KEY_AQUI" || firebaseConfig.projectId === "TU_PROYECTO_ID") {
+            console.warn("⚠️ MODO SIMULACIÓN ACTIVO: Credenciales de ejemplo detectadas.");
+            isSimulated = true;
+        } else {
+            // Inicializar Firebase solo si hay credenciales reales o intento de conexión
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+        }
 
         document.getElementById('pxwForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -642,45 +705,55 @@ const app = initializeApp(firebaseConfig);
             // UI: Mostrar estado de carga
             btn.innerText = "Guardando...";
             btn.disabled = true;
-            btn.classList.add('opacity-75');
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
 
-            // Recolectar datos del formulario
-            // Nota: Obtenemos los valores de los inputs por su orden o tipo para no depender de IDs
+            // Si estamos en MODO SIMULACIÓN (sin claves puestas)
+            if (isSimulated) {
+                console.log("Simulando envío de datos...");
+                setTimeout(() => {
+                    showThankYouPage();
+                }, 2000); // Esperar 2 segundos y mostrar éxito falso
+                return;
+            }
+
+            // Si estamos en MODO REAL (con claves)
+            // RECOLECTAR DATOS (Actualizado con campo Instagram)
             const formData = {
                 nombreClinica: form.querySelector('input[placeholder*="Clínica"]').value,
                 ciudadPais: form.querySelector('input[placeholder*="Lima"]').value,
                 nombreCargo: form.querySelector('input[placeholder*="Juan"]').value,
+                instagram: form.querySelector('input[placeholder*="@tu_clinica"]').value, // NUEVO CAMPO
                 whatsapp: form.querySelector('input[type="tel"]').value,
                 email: form.querySelector('input[type="email"]').value,
                 leadsMensuales: form.querySelectorAll('select')[0].value,
                 inversionAds: form.querySelectorAll('select')[1].value,
                 intereses: Array.from(form.querySelectorAll('input[type="checkbox"]:checked'))
                            .map(cb => cb.parentElement.innerText.trim())
-                           .filter(text => !text.includes('Acepto')), // Excluir el checkbox legal de la lista de intereses
-                fecha: serverTimestamp() // Marca de tiempo del servidor
+                           .filter(text => !text.includes('Acepto')),
+                fecha: serverTimestamp()
             };
 
             try {
-                // GUARDAR EN FIREBASE (Colección "leads")
-                // Asegúrate de que tu base de datos Firestore esté creada en modo "Prueba"
+                // INTENTAR GUARDAR EN FIREBASE
                 const docRef = await addDoc(collection(db, "leads"), formData);
                 console.log("Documento escrito con ID: ", docRef.id);
-
-                // UI: Éxito
-                setTimeout(() => {
-                    form.style.display = 'none';
-                    document.getElementById('successMessage').classList.remove('hidden');
-                    document.getElementById('evaluacion').scrollIntoView({ behavior: 'smooth' });
-                }, 500);
+                
+                // Si todo sale bien -> Mostrar página de gracias
+                showThankYouPage();
 
             } catch (e) {
                 console.error("Error añadiendo documento: ", e);
-                alert("Hubo un error al enviar el formulario. Verifica tu conexión o configuración de Firebase.");
+                
+                let mensajeError = "Hubo un error al enviar el formulario. Verifica tu conexión.";
+                if (e.code === 'permission-denied') mensajeError = "Error de Permisos: Revisa las reglas de Firestore.";
+                else if (e.code === 'unavailable') mensajeError = "No hay conexión con Firebase.";
+
+                alert(mensajeError);
                 
                 // Restaurar botón
                 btn.innerText = originalText;
                 btn.disabled = false;
-                btn.classList.remove('opacity-75');
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
             }
         });
     </script>
