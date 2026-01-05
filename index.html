@@ -970,6 +970,8 @@
 
             try {
                 await addDoc(collection(db, "leads"), formData);
+                            // Track Facebook Pixel - Complete Registration
+                            fbq('track', 'CompleteRegistration');
                 showThankYouPage();
             } catch (e) {
                 console.error("Error:", e);
